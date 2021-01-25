@@ -1,6 +1,8 @@
 package ee.taltech.theme1.part1_3;
 
+import ee.taltech.theme1.part1.HelloClass;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -29,6 +31,14 @@ class HelloJunitTest {
     // 3) call a method to set new location
     // 4) assert that location has changed
 
+    @Test
+    @DisplayName("HelloClass location is Greenland and it can be changed")
+    void helloClassGreenlandTest() {
+        HelloClass helloClass = new HelloClass();
+        assertEquals("Greenland", helloClass.getLocation());
+        helloClass.setLocation("Abu Dhabi");
+        assertEquals("Abu Dhabi", helloClass.getLocation());
+    }
 
     //todo 1.10 already here? Congratz! Help your neighbours!
 }

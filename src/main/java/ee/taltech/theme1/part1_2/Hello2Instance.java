@@ -15,11 +15,15 @@ public class Hello2Instance {
         // compared to greeting this is an instance field, so you need to create a new instance
         // Hello2Instance hello2Instance = new Hello2Instance()
 
+        Hello2Instance hello2Instance = new Hello2Instance();
+        System.out.println(hello2Instance.location);
 
         //todo 1.5 find a way to change "location" to something warmer, like Abu Dhabi
         // try not to change location on line 10, instead find a way to assign a new value
+        hello2Instance.location = "Abu Dhabi";
 
         //todo 1.6 find a way to call method "something"
+        hello2Instance.something();
     }
 
     //static method, void doesn't return anything

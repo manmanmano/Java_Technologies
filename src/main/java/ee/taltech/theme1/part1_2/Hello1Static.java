@@ -13,7 +13,11 @@ public class Hello1Static {
     public static void main(String[] args) {
         //todo 1.2 find a way to print the value of the field "greeting"
 
+        System.out.println(greeting);
+
         //todo 1.3 find a way to call method "nothing"
+        nothing();
+
     }
 
     //static method, void doesn't return anything
