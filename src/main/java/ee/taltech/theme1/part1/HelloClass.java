@@ -13,22 +13,25 @@ public class HelloClass {
     public static void main(String[] args) {
         //todo 1.1 run main and get it to write your name
         //IntelliJ protip write sout and then tab
+        System.out.println("Oleg");
 
         //todo 1.2 find a way to print the value of the field "greeting"
-
+        System.out.println(greeting);
 
         //todo 1.3 find a way to call method "nothing"
-
+        nothing();
 
         //todo 1.4 find a way to print the value of the field "location".
-
+        HelloClass helloClass = new HelloClass();
+        System.out.println(helloClass.location);
 
         //todo 1.5 find a way to change "location" to something warmer, like Abu Dhabi
         // try not to change location on line 10, instead set there new value or something
-
+        helloClass.location = "Abu Dhabi";
+        System.out.println(helloClass.location);
 
         //todo 1.6 find a way to call method "something"
-
+        helloClass.something();
 
         //todo 1.7 while main method is fun, developers write tests instead
         // go to HelloWorldTest and continue there
