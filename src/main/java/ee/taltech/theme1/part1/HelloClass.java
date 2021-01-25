@@ -34,7 +34,7 @@ public class HelloClass {
         helloClass.something();
 
         //todo 1.7 while main method is fun, developers write tests instead
-        // go to HelloWorldTest and continue there
+        // go to HelloClassTest and continue there
     }
 
     //static method, void doesn't return anything
