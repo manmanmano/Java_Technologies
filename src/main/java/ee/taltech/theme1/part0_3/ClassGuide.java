@@ -1,5 +1,8 @@
 package ee.taltech.theme1.part0_3;
 
+/**
+ * Before you delve into this read https://olegpahhomov.gitlab.io/first-time-java/static-vs-instance/
+ */
 //ClassGuide is a class
 // There can be multiple classes in one file (it is recommended to use just one)
 // Only one class must be public. Public class name must match filename

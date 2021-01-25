@@ -1,5 +1,8 @@
 package ee.taltech.theme1.part0_2;
 
+/**
+ * referenced in https://olegpahhomov.gitlab.io/first-time-java/classes/
+ */
 public class Person {
 
     public static void main(String[] args) {
