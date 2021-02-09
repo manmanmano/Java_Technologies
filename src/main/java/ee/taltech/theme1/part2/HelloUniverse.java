@@ -1,6 +1,7 @@
 package ee.taltech.theme1.part2;
 
 import ee.taltech.theme1.part2.celestialbodies.Sun;
+import ee.taltech.theme1.part2.celestialbodies.Earth;
 
 public class HelloUniverse {
 
@@ -14,6 +15,11 @@ public class HelloUniverse {
     //todo 2.4 when you print out new Sun() it returns something like ee.taltech.lesson1.part2.Sun@5674cd4d
     // is there a way to make that action print our something else like "Sun"
     public static void main(String[] args) {
-        System.out.println(new Sun());
+        Sun sunny = new Sun();
+        System.out.println(sunny.getName());
+        Earth earthy = new Earth();
+        System.out.println(new Earth().getName());
+
     }
+
 }
