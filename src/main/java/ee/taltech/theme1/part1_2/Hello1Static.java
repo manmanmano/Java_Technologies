@@ -12,17 +12,21 @@ public class Hello1Static {
     //this is a special main function. It special because it runs the class (or application).
     public static void main(String[] args) {
         //todo 1.2 find a way to print the value of the field "greeting"
+        System.out.println(greeting);
 
         //todo 1.3 find a way to call method "nothing"
+        nothing();
     }
 
     //static method, void doesn't return anything
     public static void nothing(){
+
         System.out.println("nothing");
     }
 
     //instance method
     public void something(){
+
         System.out.println("nothing");
     }
 }

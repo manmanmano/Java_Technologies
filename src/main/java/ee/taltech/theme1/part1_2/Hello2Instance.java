@@ -14,21 +14,37 @@ public class Hello2Instance {
         //todo 1.4 find a way to print the value of the field "location".
         // compared to greeting this is an instance field, so you need to create a new instance
         // Hello2Instance hello2Instance = new Hello2Instance()
+        Hello2Instance loc = new Hello2Instance();
+        System.out.println(loc.location);
 
 
         //todo 1.5 find a way to change "location" to something warmer, like Abu Dhabi
         // try not to change location on line 10, instead find a way to assign a new value
+        loc.location = "Abu Dhabi";
+        System.out.println(loc.location);
 
         //todo 1.6 find a way to call method "something"
+        loc.something();
     }
 
     //static method, void doesn't return anything
     public static void nothing(){
+
         System.out.println("nothing");
     }
 
     //instance method
     public void something(){
+
         System.out.println("nothing");
     }
+
+    public String getLocation(){
+        return location;
+    }
+
+    public void setLocation(String location){
+        this.location = location;
+    }
+
 }

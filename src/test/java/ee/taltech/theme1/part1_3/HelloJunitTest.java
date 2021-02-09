@@ -1,5 +1,6 @@
 package ee.taltech.theme1.part1_3;
 
+import ee.taltech.theme1.part1_2.Hello2Instance;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +11,7 @@ class HelloJunitTest {
     //todo 1.7 run the test and fix the test
     @Test
     void helloWorld_author_is_donald_duck() {
+
         Assertions.assertEquals("Donald Duck", HelloJunit.author());
     }
 
@@ -28,6 +30,14 @@ class HelloJunitTest {
     // 2) assert that location is Greenland
     // 3) call a method to set new location
     // 4) assert that location has changed
+
+    @Test
+    void HelloWorldLocation() {
+        Hello2Instance loc = new Hello2Instance();
+        assertEquals("Greenland", loc.getLocation());
+        loc.setLocation("Abu Dhabi");
+        assertEquals("Abu Dhabi", loc.getLocation());
+    }
 
 
     //todo 1.10 already here? Congratz! Help your neighbours!

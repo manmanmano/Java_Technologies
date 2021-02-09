@@ -57,12 +57,22 @@ public class HelloClass {
     //static method, this one returns a String. Notice String and return statement
     public static String author(){
 
-        return "Donald";
+        return "Donald Duck";
     }
 
     //instance method, this one returns a String.
     public String hobby(){
 
-        return "some ball game";
+        return "Football";
     }
+
+    public String getLocation(){
+        return location;
+    }
+
+    public void setLocation(String location){
+
+        this.location = location;
+    }
+
 }

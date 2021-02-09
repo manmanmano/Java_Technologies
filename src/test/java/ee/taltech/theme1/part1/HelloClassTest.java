@@ -6,6 +6,7 @@ package ee.taltech.theme1.part1;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -14,6 +15,7 @@ class HelloClassTest {
     //todo 1.7 run the test and fix the test
     @Test
     void helloWorld_author_is_donald_duck() {
+
         Assertions.assertEquals("Donald Duck", HelloClass.author());
     }
 
@@ -29,6 +31,15 @@ class HelloClassTest {
     // there could be a setter in HelloWorld to location (setter is a method whose whole purpose is to set new value to the field)
     // logic could be... you create HelloWorld, it's location is Greenland
     // then you call your method and then it's location is something new
+
+    @Test
+    @DisplayName("Hello Class location is Greenland and it can be changed")
+    void HelloClassGreenlandTest() {
+        HelloClass loc = new HelloClass();
+        assertEquals("Greenland", loc.getLocation());
+        loc.setLocation("Abu Dhabi");
+        assertEquals("Abu Dhabi", loc.getLocation());
+    }
 
 
     //todo 1.10 already here? Congratz! Help your neighbours!
