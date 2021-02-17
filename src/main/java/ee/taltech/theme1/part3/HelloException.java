@@ -11,12 +11,16 @@ public class HelloException {
 
         //todo 3.3 a bit hardcore, but can you catch Exception?
         // you have to uncomment this line
-//        catchMe();
+        try {
+            catchMe();
+        } catch(Exception ignore){
+            System.out.println(ignore.getMessage());
+        }
 
         //todo 3.4 What to do with exception once it's caught? It might prove useful for second part of the course.
         // or at least at work
         // I doubt we will be catching Exceptions anytime soon
-    }
+        }
 
     public static void caseOne(){
         Bank bank = HelloException.getBank();
@@ -33,6 +37,7 @@ public class HelloException {
     }
 
     public static Bank getBank(){
-        return null;
+
+        return new Bank();
     }
 }

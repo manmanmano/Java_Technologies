@@ -4,6 +4,6 @@ public class Bank {
 
     public Integer getFreeMoney(){
 
-        return null;
+        return 0;
     }
 }
