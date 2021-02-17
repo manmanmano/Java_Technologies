@@ -13,6 +13,9 @@ public class StringMaker {
      */
     public static String make(String s, int x) {
         String chars = "";
+        for (int i = 0; i < x; i++){
+           chars += s;
+        }
         return chars;
     }
 
@@ -21,6 +24,12 @@ public class StringMaker {
      */
     public static String make(String s1, int x1, String s2, int x2) {
         String chars = "";
+        for (int i = 0; i < x1; i++){
+            chars += s1;
+        }
+        for (int i = 0; i < x2; i++){
+            chars += s2;
+        }
         return chars;
     }
 }
