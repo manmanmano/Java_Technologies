@@ -16,8 +16,18 @@ class NegativesTest {
     // we should assert status, input and output, duration is for information purposes and is hard to assert
 
     @Test
-    @DisplayName("removePositivesReturnsNullOnNull")
-    void removePositivesReturnsEmptyOnEmpty() {
+    @DisplayName("Remove Positives Returns Null On Null")
+    void removePositivesReturnsNullOnNull(){
+        CalculationResult result = Negatives.removePositives(null);
+        assertNull(result.getInput());
+        assertNull(result.getOutput());
+        assertNotNull(result.getDuration());
+        assertEquals(CalculationStatus.NO_CALC, result.getStatus());
+    }
+
+    @Test
+    @DisplayName("Remove Positives Returns Empty On Empty")
+    void removePositivesReturnsEmptyOnEmpty(){
         CalculationResult result = Negatives.removePositives(List.of());
         assertEquals(List.of(), result.getInput());
         assertEquals(List.of(), result.getOutput());
@@ -26,8 +36,8 @@ class NegativesTest {
     }
 
     @Test
-    @DisplayName("remove positives doesn't remove negatives")
-    void removePositivesDoesntRemoveNegatives() {
+    @DisplayName("Remove Positives Doens't Remove Negatives")
+    void removePositivesDoesntRemoveNegatives(){
         List<Integer> list = List.of(-1, -2, -3);
         CalculationResult result = Negatives.removePositives(list);
         assertEquals(list, result.getInput());
@@ -37,9 +47,9 @@ class NegativesTest {
     }
 
     @Test
-    @DisplayName("remove positives removes positives")
-    void removePositivesRemovesPositives() {
-        CalculationResult result = Negatives.removePositives(List.of(1, 13, -2, -4, 999));
+    @DisplayName("Remove Positives Removes Positives")
+    void removePositivesRemovesRemovesPositives(){
+        CalculationResult result = Negatives.removePositives(List.of(1, 13, 999));
         assertEquals(List.of(1, 13, 999), result.getInput());
         assertEquals(List.of(), result.getOutput());
         assertNotNull(result.getDuration());
@@ -47,8 +57,8 @@ class NegativesTest {
     }
 
     @Test
-    @DisplayName("remove positives but keeps negatives")
-    void removePositivesKeepsNegatives() {
+    @DisplayName("Remove Positives But Keeps Negatives")
+    void removePositivesButKeepsNegatives(){
         CalculationResult result = Negatives.removePositives(List.of(1, 13, -2, -4, 999));
         assertEquals(List.of(1, 13, -2, -4, 999), result.getInput());
         assertEquals(List.of(-2, -4), result.getOutput());
