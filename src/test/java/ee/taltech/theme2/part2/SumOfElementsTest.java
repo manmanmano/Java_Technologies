@@ -4,8 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 class SumOfElementsTest {
 
@@ -18,14 +17,19 @@ class SumOfElementsTest {
 
     @Test
     void on_null() {
+        //throw error
+        assertThrows(NullPointerException.class, ()-> SumOfElements.sum(null));
         //todo 12.3 this is your decision what to return on "null" input
         // is sum of nothing nothing or a zero?
         // in the next lecture we will talk about Java Optional<T>
+
     }
 
     @Test
     void on_no_elements() {
         //todo 12.4 this is your decision what to return on "empty list" input
+        //throw error
+        assertThrows(NullPointerException.class, ()-> SumOfElements.sum(null));
     }
 
 }

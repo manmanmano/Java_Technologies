@@ -6,6 +6,15 @@ public class BiggestElement {
 
     //todo 12.1 fix the tests and add logic
     public static Integer findBiggest(List<Integer> numbers){
-        return null;
+        if (numbers == null || numbers.isEmpty()){
+            return null;
+        }
+        Integer max = Integer.MIN_VALUE;
+        for (Integer number : numbers) {
+            if (number > max){
+                max = number;
+            }
+        }
+        return max;
     }
 }
