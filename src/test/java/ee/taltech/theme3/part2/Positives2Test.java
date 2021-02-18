@@ -18,7 +18,7 @@ class Positives2Test {
 
     @Test
     void removeNegatives_removes_only_the_negative_integers() {
-        assertEquals(List.of(), Positives2.removeNegatives(List.of(-2, -4, -1, 1)));
+        assertEquals(List.of(1), Positives2.removeNegatives(List.of(-2, -4, -1, 1)));
     }
 
     @Test
@@ -28,7 +28,7 @@ class Positives2Test {
 
     @Test
     void removeNegatives_removes_all_negative_integers() {
-        assertEquals(List.of(1), Positives2.removeNegatives(List.of(-2, -4, -1, -1)));
+        assertEquals(List.of(1), Positives2.removeNegatives(List.of(-2, -4, -1, 1)));
     }
 
     //todo 102.4 add some tests... null, negatives, positives, mixed
