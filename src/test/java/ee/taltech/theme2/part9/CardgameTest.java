@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
-class CardgameTest {
+class  CardgameTest {
 
     @Test
     void cards_contain_ace_of_spades() {

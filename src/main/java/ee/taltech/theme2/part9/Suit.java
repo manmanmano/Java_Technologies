@@ -1,5 +1,7 @@
 package ee.taltech.theme2.part9;
 
+import java.nio.charset.Charset;
+
 public enum Suit {
 	/** &spades; */
 	SPADES,
